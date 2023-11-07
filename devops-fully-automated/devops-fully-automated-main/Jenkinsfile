@@ -18,7 +18,7 @@ pipeline {
         stage('Git checkout') {
             steps {
                 echo 'Cloning the application code...'
-                git branch: 'main', url: 'https://github.com/mariusforreal/devops-fully-automated.git'
+                git branch: 'main', url: 'https://github.com/envyvalery/devops-fully-automated1.git'
 
             }
         }
@@ -62,9 +62,9 @@ pipeline {
         stage('SonarQube Scan') {
           steps {
             sh """mvn sonar:sonar \
-                  -Dsonar.projectKey=sonar \
-                  -Dsonar.host.url=http://54.175.136.208:9000 \
-                  -Dsonar.login=d54b7b3367c11de45b3e78b34ae6367652caee1b"""
+                      -Dsonar.projectKey=sonar \
+                      -Dsonar.host.url=http://3.91.217.237:9000 \
+                      -Dsonar.login=aee026160039a680ab536a25eb7f8aee6f324070"""
           }
         }
 
